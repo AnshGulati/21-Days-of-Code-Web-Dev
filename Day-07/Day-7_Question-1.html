@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansh gulati, Day-7, Question-2</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: roboto;
+        background-color: rgba(228, 151, 252, 0.667);
+        height: 5000px;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: purple;
+        padding: 10px;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 50px;
+        position: relative;
+        top: 100px;
+        left: 10px;
+    }
+
+    @media screen and (max-width:768px) {
+        nav ul {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            top: 60px;
+            left: 0px;
+            width: 100%;
+            background-color: purple;
+            text-align: center;
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav ul li {
+            margin-top: 10px;
+        }
+
+        .menu-icon {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            fill: white;
+            z-index: 1000;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <ul id="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+        <svg class="menu-icon" viewBox="0 0 100 80" width="40" height="40" onclick="toggleMenu()">
+            <rect width="100" height="15" fill="white"></rect>
+            <rect y="30" width="100" height="15" fill="white"></rect>
+            <rect y="60" width="100" height="15" fill="white"></rect>
+        </svg>
+    </nav>
+
+    <div class="container">
+
+        <div id="home">
+            <h1>Home</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia esse odit corrupti doloremque natus
+                sequi in
+                amet, laboriosam, voluptatibus illum voluptatem? Ab ex saepe impedit ducimus consequatur expedita
+                laborum
+                quae repellendus earum. Qui provident perferendis nam non aliquid, adipisci ut fugiat vero, iure totam
+                hic!
+            </p>
+        </div>
+
+        <div id="about">
+            <h1>About</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia tenetur quae autem nulla, fuga nesciunt
+                vitae
+                ea possimus asperiores optio debitis laudantium ipsa consequuntur? In beatae, iusto, placeat odio
+                voluptates
+                voluptatum optio expedita, totam exercitationem veritatis minus ipsa reprehenderit corporis neque
+                repellendus. Omnis laudantium libero iure dolores cumque nulla ut nobis numquam expedita eveniet, dolore
+                quis assumenda vero ipsam laboriosam?</p>
+
+        </div>
+
+        <div id="contact">
+            <h1>Contact</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus veritatis harum porro voluptatem
+                molestias
+                perferendis vero qui nam fugit, ipsum asperiores fuga aliquam accusantium dolorem pariatur facilis,
+                debitis,
+                quae nobis quia optio. Vel necessitatibus non error accusamus! Ipsam esse tempore eius id aliquam sequi,
+                dolorum delectus animi quam, ducimus suscipit vitae minus, deserunt mollitia dignissimos error
+                repellendus
+                ex ut? Aspernatur dicta molestiae, officia at iusto placeat molestias sunt dolore nulla nihil ipsa et ut
+                velit, laboriosam quaerat esse. Excepturi obcaecati rerum blanditiis, ducimus harum consequatur velit
+                quidem, aut minima enim illo! Delectus cupiditate maxime dolorem voluptatum nihil quo deserunt eos.</p>
+
+        </div>
+
+        <div id="blog">
+            <h1>Blog</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi at nostrum id assumenda ducimus. Omnis
+                autem, earum aperiam ducimus alias magni sequi ea labore dignissimos excepturi nulla, possimus
+                repudiandae
+                sit? Quos consectetur velit, necessitatibus voluptatem sed vel expedita officiis tempore nostrum soluta
+                aliquam illo hic provident facere repudiandae at aut quis debitis quaerat. Aspernatur vel, quos itaque
+                ad
+                corrupti libero suscipit voluptate illo maxime, voluptates, nesciunt harum at quod exercitationem
+                perferendis! Fuga placeat odit iste quod, iusto aliquid illum officiis consequuntur eligendi incidunt et
+                laborum optio mollitia ducimus illo atque quo rem, quis qui blanditiis porro. Rem, quos modi accusantium
+                repudiandae asperiores et voluptate autem omnis, nostrum libero totam debitis voluptatibus enim hic
+                nulla
+                ut? Ad labore laboriosam explicabo autem!</p>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
